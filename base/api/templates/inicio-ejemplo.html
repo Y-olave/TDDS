@@ -1,0 +1,40 @@
+{% extends "./plantilla.html" %}
+
+{% block title %}tienda{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+
+  </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>nombre</th>
+                        <th>precio</th>
+                        <th>descripcion</th>
+                        <th>cantidad</th>
+                        <th>imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{usuario.nombre}}</td>
+                        <td>{{usuario.precio}}</td>
+                        <td>{{usuario.descripcion}}</td>
+                        <td>{{usuario.cantidad}}</td>
+                        <td>{{usuario.imagen}}</td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+{% endblock %}
